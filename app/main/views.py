@@ -7,15 +7,16 @@ from flask_login import login_required, current_user
 from ..request import get_blogQuotes
 from ..email import mail_message
 
+ 
 # Views
 @main.route('/')
 def index():
     '''
     View root page function that returns the index page and its data
     '''
-    blogQuote = get_blogQuotes()
+    blogQuote =  get_blogQuotes()
 
-    title= 'Home- Welcome to K-Blogs'
+    title= 'Home- Welcome to Blogs'
     return render_template('index.html',title = title, blogQuote=blogQuote)
 
 @main.route('/user/<uname>')
