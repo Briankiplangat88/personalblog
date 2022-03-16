@@ -32,9 +32,7 @@ class ProdConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
    
-    SQLALCHEMY_DATABASE_URI  ='postgresql://jwwgorxkpqcxle:434f94ccb778a0d6bf62316163b80a4daaf1a133e593d700ba47701e38d7d140@ec2-34-231-183-74.compute-1.amazonaws.com:5432/dbqdjqpuk0bapa'
-
-
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blog'
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blog'
