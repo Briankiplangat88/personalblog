@@ -46,7 +46,7 @@ The following command installs all the application requirements
 pip freeze -r requirements.txt
 
 Setup
-Run git clone https://github.com/brianliplangat88/PITCHES.git
+Run git clone https://github.com/brianliplangat88/personalblog.git
 
 or download the zip file from github.
 
