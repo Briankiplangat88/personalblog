@@ -2,11 +2,9 @@
 ## AUTHOR 
  - BRIAN KIPLANGAT
 
- ## DESCRIPTION 
- - This is a Python-Flask Application that allows users to create one minute pitch. You only have 60 seconds to impress someone. 1 minute can make or break you.
-The users will submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
-
-
+ ## DESCRIPTION
+ this is a python project that generates a quote 
+ 
 >Login Inputs
 
 | Inputs |  Description |
@@ -82,7 +80,7 @@ The following command installs all the application requirements
 
 ## Setup
 Run 
-``git clone https://github.com/brianliplangat88/PITCHES.git``
+``git clone https://github.com/brianliplangat88/personalblog.git``
 
 or download the zip file from github.
 
