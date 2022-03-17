@@ -41,7 +41,7 @@
 
 - Users can submit a quote in any category. 
 
-##
+
 
 ## Technologies used
 * Python3
@@ -104,4 +104,5 @@ Run the following command in the application $ chmod a+x start.sh
 Open the application on your browser ./start.sh.
 
 
-check out the livelink on my github page
+## check out the livelink on my github page
+live link 
