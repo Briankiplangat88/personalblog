@@ -41,7 +41,7 @@
 
 - Users can submit a quote in any category. 
 
-
+##
 
 ## Technologies used
 * Python3
@@ -74,6 +74,7 @@ To work with ONE MINUTE PITCH App you need to have some few prerequisites.
 The following command installs all the application requirements
 >``pip freeze -r requirements.txt``
 
+
 ## Setup
 Run 
 ``git clone https://github.com/brianliplangat88/personalblog.git``
@@ -97,6 +98,10 @@ After extracting the files,
 5. Running tests
 
  > ``python3 manage.py test.``
+
+Exporting Configurations export SQLALCHEMY_DATABASE_URI=postgresq +psycopg2://{User Name}:{password}@localhost/{database name}
+Run the following command in the application $ chmod a+x start.sh
+Open the application on your browser ./start.sh.
 
 
 check out the livelink on my github page
