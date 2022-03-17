@@ -1,48 +1,18 @@
-{% extends 'base.html'%} {% import 'bootstrap/wtf.html' as wtf%}{% import 'macros.html' as macro%}
-<!-- Styles block -->
+{% extends 'base.html' %} {%block content%}
+<div class="container">
+    <div class="col-md-8">
+        <div>
+            <h2 style="font-size: 80px; font-family: 'Lobster', cursive;  padding-top: 40px; text-align: center;">
+                Welcome to Blog site</h2>
+            <br><br>
 
-{% block styles%} {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
+            <p class="text-center">{{blogQuote.quote}}</p>
 
-<!-- Content block -->
-{% block content %}
+            <p class="text-center"><b>~ {{blogQuote.author}} ~</b> </p>
 
-<div class="container-fluid">
-    <div class="row" style="padding-left: 30px; ">
-        {% if current_user.is_authenticated %}
-        <h2>Hello {{current_user.username}},</h2>
-        {% else %}
-        <h2>Hello stranger</h2>
-        {% endif %}
-        <h3>Welcome to My Personal Blog.</h3>
-        <h4>Feel free to add a blog.</h4>
-        <p><a style="background-color: #b5179e; color: white;" href=" {{url_for('main.blog_form')}} " class="btn btn-primary" role="button">Blog</a></p>
-
-        <h3>Quote:</h3>
-        {% for quote in quote %}
-        <p style="color: #b5179e">{{quote.quote}}</p>
-        <em> <p>By: {{quote.author}}</p> </em> {% endfor %}
-        <h3 class="" id="card">Subscribe to get updates on new blogs</h3>
-        <p><a style="background-color: #b5179e; color: white;" href="/subscribe" class="btn btn-primary" role="button">Subscribe</a></p>
-        </p>
+        </div>
     </div>
-    <div class="row">
-        {% for blog in blogs[::-1] %}
-
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3 style="color: #893168; "> {{blog.title}} </h3>
-                    <p> {{blog.blog_text}}</p>
-                    <p>Posted on: {{blog.posted}}</p>
-                    <p>
-                        <a style="background-color:#b5179e; color: white;" href=" {{url_for('main.comment',blog_id = blog.id)}} " class="btn btn-primary" role="button">Comment</a>
-                        <a style="color:#b5179e; background-color: white;" href="{{url_for( 'main.delete_blog',id=blog.id)}}" class="btn btn-primary" role="button">Delete</a>
-                        <a style="background-color:#b5179e; color: white;" href=" {{url_for('main.update_blog',blog_id = blog.id)}} " class="btn btn-primary" role="button">Update</a>
-                    </p>
-                </div>
-            </div>
-        </div> {% endfor %}
-    </div>
+    <div class="col-md-2"></div>
 </div>
-{% endblock%}
+
+{%endblock%}

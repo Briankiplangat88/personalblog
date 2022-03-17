@@ -75,9 +75,10 @@ def blogs():
         db.session.commit()
         for subscriber in subscribers:
             mail_message("Alert New Blog","email/new_blog",subscriber.email,new_blog=new_blog)
+            flash('New Blog Posted')
         return redirect(url_for('main.index'))
-        flash('New Blog Posted')
-        return redirect(url_for('main.theblog'))
+        
+    
     title = 'My Blog'
     return render_template('blogs.html', title=title, blog_form=blog_form)
 
